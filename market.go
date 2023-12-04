@@ -21,10 +21,10 @@ type TickerLevel1Model struct {
 
 type TickerV2Model struct {
 	Symbol       string `json:"symbol"`
-	BestBidSize  int    `json:"bestBidSize"`
-	BestBidPrice string `json:"bestBidPrice"`
-	BestAskSize  int    `json:"bestAskSize"`
-	BestAskPrice string `json:"bestAskPrice"`
+	BestBidSize  float64    `json:"bestBidSize"`
+	BestBidPrice float64 `json:"bestBidPrice"`
+	BestAskSize  float64    `json:"bestAskSize"`
+	BestAskPrice float64 `json:"bestAskPrice"`
 	Ts           int64  `json:"ts"`
 }
 
