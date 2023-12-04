@@ -19,6 +19,15 @@ type TickerLevel1Model struct {
 	Ts           int64  `json:"ts"`
 }
 
+type TickerV2Model struct {
+	Symbol       string `json:"symbol"`
+	BestBidSize  int    `json:"bestBidSize"`
+	BestBidPrice string `json:"bestBidPrice"`
+	BestAskSize  int    `json:"bestAskSize"`
+	BestAskPrice string `json:"bestAskPrice"`
+	Ts           int64  `json:"ts"`
+}
+
 // Ticker Get Real-Time Ticker.
 func (as *ApiService) Ticker(symbol string) (*ApiResponse, error) {
 	req := NewRequest(http.MethodGet, "/api/v1/ticker", map[string]string{"symbol": symbol})
